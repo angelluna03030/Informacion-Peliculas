@@ -45,32 +45,34 @@ class CardHorizontal extends StatelessWidget {
 
   Widget crearTarjeta(BuildContext context, Pelicula pelicula) {
     // ignore: non_constant_identifier_names
-    final PeliculaTargeta = Container(
-      margin: const EdgeInsets.only(right: 25.0),
-      width: 160.0, // Ajusta el ancho según sea necesario
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          ClipRRect(
-            borderRadius: BorderRadius.circular(10.0),
-            child: FadeInImage(
-              placeholder: const AssetImage(
-                  'assets/img/icon-image-not-found-free-vector.jpg'),
-              image: NetworkImage(pelicula.getPosterImg()),
-              fit: BoxFit.fill,
-              height: 170.0,
+    final PeliculaTargeta = SingleChildScrollView(
+      child: Container(
+        margin: const EdgeInsets.only(right: 25.0),
+        width: 160.0, // Ajusta el ancho según sea necesario
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            ClipRRect(
+              borderRadius: BorderRadius.circular(10.0),
+              child: FadeInImage(
+                placeholder: const AssetImage(
+                    'assets/img/icon-image-not-found-free-vector.jpg'),
+                image: NetworkImage(pelicula.getPosterImg()),
+                fit: BoxFit.fill,
+                height: 170.0,
+              ),
             ),
-          ),
-          const SizedBox(
-            height: 2.5,
-          ), // Espacio adicional entre la imagen y el texto
-          Text(
-            pelicula.title,
-            overflow: TextOverflow.ellipsis,
-            maxLines: 2, // Limita a 2 líneas para evitar desbordamiento
-            style: Theme.of(context).textTheme.bodyMedium,
-          ),
-        ],
+            const SizedBox(
+              height: 2.5,
+            ), // Espacio adicional entre la imagen y el texto
+            Text(
+              pelicula.title,
+              overflow: TextOverflow.ellipsis,
+              maxLines: 2, // Limita a 2 líneas para evitar desbordamiento
+              style: Theme.of(context).textTheme.bodyMedium,
+            ),
+          ],
+        ),
       ),
     );
     return GestureDetector(

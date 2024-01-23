@@ -31,7 +31,7 @@ class HomePage extends StatelessWidget {
                 }),
           ],
         ),
-        body: SafeArea(
+        body: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[_swiperTargetas(), _footer(context)],
@@ -69,7 +69,7 @@ class HomePage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.all(0),
+            padding: const EdgeInsets.symmetric(vertical: 20),
             child: Container(
               padding: const EdgeInsets.only(left: 10.0),
               child: Text(
