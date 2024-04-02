@@ -29,7 +29,6 @@ class PeliculasProvider {
   Future<List<Pelicula>> _procesarRespuesta(Uri url) async {
     try {
       final response = await http.get(url);
-
       if (response.statusCode == 200) {
         final data = json.decode(response.body);
         List<Pelicula> peliculas = List.from(data['results'].map((p) {

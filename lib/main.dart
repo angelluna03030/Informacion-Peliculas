@@ -3,6 +3,7 @@ import 'package:peliculas/src/pages/home.dart';
 import 'package:peliculas/src/pages/pelicula_detalle.dart';
 
 
+
 void main() {
   
   runApp(MyApp());
