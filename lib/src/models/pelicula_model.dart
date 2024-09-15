@@ -62,7 +62,7 @@ class Pelicula {
   getPosterImg() {
 // ignore: unnecessary_null_comparison
 if (posterPath == null ){
-return "https://static.vecteezy.com/system/resources/previews/004/141/669/non_2x/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg";
+return "https://static.vecteezy.com/system/resources/previews/004/1+41/669/non_2x/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg";
 }
 
     return 'https://image.tmdb.org/t/p/w500$posterPath';

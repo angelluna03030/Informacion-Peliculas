@@ -7,7 +7,7 @@ import 'package:peliculas/src/pages/pelicula_detalle.dart';
 
 class CardSwiper extends StatelessWidget {
   final List<Pelicula> peliculas;
-  // ignore: use_key_in_widget_constructors
+
   const CardSwiper({required this.peliculas});
 
   @override

@@ -13,7 +13,7 @@ class DataSearch extends SearchDelegate {
           onPressed: () {
             query = '';
           },
-          icon:  const Icon(Icons.clear))
+          icon: const Icon(Icons.clear))
     ];
   }
 
@@ -67,8 +67,13 @@ class DataSearch extends SearchDelegate {
                 subtitle: Text(pelicula.originalTitle),
                 onTap: () {
                   close(context, null);
-      
-                  Navigator.pushNamed(context, 'detalle', arguments: pelicula);
+
+                  Navigator.pushNamed(
+                    context,
+                    'detalle',
+                    arguments: pelicula,
+                  );
+                
                 },
               );
             }).toList(),
